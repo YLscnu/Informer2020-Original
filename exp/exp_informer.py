@@ -65,7 +65,7 @@ class Exp_Informer(Exp_Basic):
             'ETTh2':Dataset_ETT_hour,
             'ETTm1':Dataset_ETT_minute,
             'ETTm1-rand':Dataset_ETT_hour,
-            'ETTm1-rand-s':Dataset_ETT_minute,
+            'ETTm1-rand-S':Dataset_ETT_minute,
             'ETTm2':Dataset_ETT_minute,
             'WTH':Dataset_Custom,
             'ECL':Dataset_Custom,
