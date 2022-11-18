@@ -60,9 +60,9 @@ class Dataset_ETT_hour(Dataset):
 
         if self.scale:
             train_data = df_data[border1s[0]:border2s[0]]
-            self.scaler.fit(train_data.values)
-            data = self.scaler.transform(df_data.values)
-        else:
+            #self.scaler.fit(train_data.values)
+            #data = self.scaler.transform(df_data.values)
+        #else:
             data = df_data.values
             
         df_stamp = df_raw[['date']][border1:border2]
