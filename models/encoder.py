@@ -33,7 +33,7 @@ class EncoderLayer(nn.Module):
         self.norm1 = nn.LayerNorm(d_model)
         self.norm2 = nn.LayerNorm(d_model)
         self.dropout = nn.Dropout(dropout)
-        self.activation = F.softmax
+        self.activation = F.relu
 
     def forward(self, x, attn_mask=None):
         # x [B, L, D]
