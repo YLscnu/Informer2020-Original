@@ -109,7 +109,7 @@ class Exp_Informer(Exp_Basic):
         return model_optim
     
     def _select_criterion(self):
-        criterion =  nn.CrossEntropyLoss()
+        criterion =  nn.MSELoss() #nn.CrossEntropyLoss()
         return criterion
 
     def vali(self, vali_data, vali_loader, criterion):
