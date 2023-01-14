@@ -71,7 +71,7 @@ class Informer(nn.Module):
             # nn.Flatten(),  #平展操作，使得通道维度最大，其他维度降维1
             nn.Linear(125, 60), nn.Tanh(),  # 120输出的全连接层
             nn.Linear(60, 30), nn.Tanh(),  # 60输出的全连接层
-            nn.Linear(30, c_out),nn.Softmax())  # 1输出的全连接层
+            nn.Linear(30, c_out),nn.Tanh())  # 1输出的全连接层
         
     def forward(self, x_enc, x_mark_enc, x_dec, x_mark_dec, 
                 enc_self_mask=None, dec_self_mask=None, dec_enc_mask=None):
