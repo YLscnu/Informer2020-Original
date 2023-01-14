@@ -64,13 +64,13 @@ class Informer(nn.Module):
         # self.end_conv2 = nn.Conv1d(in_channels=d_model, out_channels=c_out, kernel_size=1, bias=True)
         #self.projection = nn.Linear(d_model, c_out, bias=True)
         self.projection = nn.Sequential(
-            nn.Conv1d(72, 36, kernel_size=5), nn.Relu(),  # 核大小为5
+            nn.Conv1d(72, 36, kernel_size=5), nn.ReLU(),  # 核大小为5
             nn.AvgPool1d(2),  # 进行最大池化
-            nn.Conv1d(36, 72, kernel_size=5), nn.Relu(),  # 核大小为5
+            nn.Conv1d(36, 72, kernel_size=5), nn.ReLU(),  # 核大小为5
             nn.MaxPool1d(2),  # 进行最大池化
             # nn.Flatten(),  #平展操作，使得通道维度最大，其他维度降维1
-            nn.Linear(125, 60), nn.Relu(),  # 120输出的全连接层
-            nn.Linear(60, 30), nn.Relu(),  # 60输出的全连接层
+            nn.Linear(125, 60), nn.ReLU(),  # 120输出的全连接层
+            nn.Linear(60, 30), nn.ReLU(),  # 60输出的全连接层
             nn.Linear(30, c_out),nn.Softmax())  # 1输出的全连接层
         
     def forward(self, x_enc, x_mark_enc, x_dec, x_mark_dec, 
