@@ -69,6 +69,7 @@ class Exp_Informer(Exp_Basic):
             'ETTm1-rand-S-24-7w':Dataset_ETT_minute,
             'ETTm1-rand-S-28-7w':Dataset_ETT_minute,
             'ETTm1-rand-S-30-7w':Dataset_ETT_minute,
+            'ETTm1-rand-S-LightModel-10w':Dataset_ETT_minute,
             'ETTm2':Dataset_ETT_minute,
             'WTH':Dataset_Custom,
             'ECL':Dataset_Custom,
