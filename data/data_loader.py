@@ -140,8 +140,8 @@ class Dataset_ETT_minute(Dataset):
         df_raw = pd.read_csv(os.path.join(self.root_path,
                                           self.data_path))
 
-        border1s = [0, 12*104*24*4 - self.seq_len, 16*104*24*4 - self.seq_len]
-        border2s = [12*104*24*4, 16*104*24*4, 20*104*24*4]
+        border1s = [0, 12*15*24*4 - self.seq_len, 16*15*24*4 - self.seq_len]
+        border2s = [12*15*24*4, 16*15*24*4, 20*15*24*4]
         # 3w是12*15,5w是12*24,7w是12*36,10w是12*52,20w是12*104，最后的24*4不变
         border1 = border1s[self.set_type]
         border2 = border2s[self.set_type]
