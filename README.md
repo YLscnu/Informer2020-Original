@@ -1,3 +1,5 @@
+
+
 # Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting (AAAI'21 Best Paper)
 ![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg?style=plastic)
 ![PyTorch 1.2](https://img.shields.io/badge/PyTorch%20-%23EE4C2C.svg?style=plastic)
@@ -65,7 +67,7 @@ To easily reproduce the results you can follow the next steps:
 3. Run each script in `scripts/` using `make run_module module="bash ETTh1.sh"` for each script.
 4. Alternatively, run all the scripts at once:
 ```
-for file in `ls scripts`; do make run_module module="bash scripts/$script"; done
+for file in `ls scripts`; do make run_module module="bash scripts/$file"; done
 ```
 
 ## Usage
@@ -194,7 +196,7 @@ If you find this repository useful in your research, please consider citing the 
                Wancai Zhang},
   title     = {Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting},
   booktitle = {The Thirty-Fifth {AAAI} Conference on Artificial Intelligence, {AAAI} 2021, Virtual Conference},
-  volume    = {35},
+  volume     = {35},
   number    = {12},
   pages     = {11106--11115},
   publisher = {{AAAI} Press},
